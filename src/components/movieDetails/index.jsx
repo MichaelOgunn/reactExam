@@ -9,6 +9,8 @@ import Fab from "@mui/material/Fab";
 import Typography from "@mui/material/Typography";
 import Drawer from "@mui/material/Drawer";
 import MovieReviews from "../movieReviews"
+import { CiGlobe } from "react-icons/ci";
+  
 
 
 const root = {
@@ -59,6 +61,9 @@ const MovieDetails = ({ movie }) => {  // Don't miss this!
           label={`${movie.vote_average} (${movie.vote_count})`}
         />
         <Chip label={`Released: ${movie.release_date}`} />
+        <Chip 
+          icon={<CiGlobe/>}
+        label= {`Original Language: ${movie.original_language} `} />
       </Paper>
 
       <Fab
