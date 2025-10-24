@@ -10,7 +10,7 @@ import Typography from "@mui/material/Typography";
 import Drawer from "@mui/material/Drawer";
 import MovieReviews from "../movieReviews"
 import { CiGlobe } from "react-icons/ci";
-  
+import { MdSavings } from "react-icons/md";
 
 
 const root = {
@@ -64,6 +64,10 @@ const MovieDetails = ({ movie }) => {  // Don't miss this!
         <Chip 
           icon={<CiGlobe/>}
         label= {`Original Language: ${movie.original_language} `} />
+        <Chip
+        icon={<MdSavings />}
+        label= {`Budget: ${movie.budget.toLocaleString()} ` } 
+        />
       </Paper>
 
       <Fab
